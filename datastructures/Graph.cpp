@@ -19,6 +19,7 @@ void Graph::readEdges(const string& filename) {
 		return;
 	}
 	file >> V >> E;
+	adjList.resize(V);
 	int v, w;
 	for (int i = 0; i < E; i++) {
 		file >> v >> w;
@@ -27,7 +28,16 @@ void Graph::readEdges(const string& filename) {
 
 	
 }
-const vector<int>& Graph::getAdj(int v) const {
+const vector<int>& Graph::getAdj(int v) {
 	return adjList[v];
+}
+void Graph::toString() const {
+	for (int i = 0; i < V; i++) {
+		cout << i << ": ";
+		for (int j : adjList[i]) {
+			cout << j << " ";
+		}
+		cout << endl;
+	}
 }
 

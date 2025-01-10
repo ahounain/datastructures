@@ -17,7 +17,9 @@ int main() {
 	cout << stack->pop() << endl;
 
 	// graph
-	Graph g();
+	Graph g;
+	g.readEdges("graph.txt");
+	g.toString();
 
 	
 	

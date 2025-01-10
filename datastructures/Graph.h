@@ -17,7 +17,8 @@ public:
 	Graph(int vertices);
 	void addEdge(int v, int w);
 	void readEdges(const string& filename);
-	const vector<int>& getAdj(int v) const {}
+	const vector<int>& getAdj(int v);
+	void toString() const;
 };
 
 #endif
