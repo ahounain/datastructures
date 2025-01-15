@@ -3,6 +3,7 @@
 #include "Node.h"
 #include "Stack.h"
 #include "Graph.h"
+#include "DFS.h"
 using namespace std;
 int main() {
 	// node
@@ -18,9 +19,13 @@ int main() {
 
 	// graph
 	Graph g;
+
 	g.readEdges("graph.txt");
 	g.toString();
 
-	
+	DFS dfs(g, 9);
+	cout << dfs.getCount() << endl;
+
+
 	
 }

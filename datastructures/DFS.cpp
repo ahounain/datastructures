@@ -1,19 +1,29 @@
 // C++ Program to implement DFS (Depth First Search) using a stack
-#include "Stack.h"
+#include "DFS.h"
 #include <iostream>
-#include <unordered_map>
+#include "Graph.h"
 using namespace std;
 
-class DFS {
-private:
-	Stack stack;
-	unordered_map<int, vector<int>> graph; // vertex -> neighbors
-	vector<bool> visited;
+DFS::DFS(Graph& G, int s) :
+ visited(G.getV()), count(0){
+	depthFirstSearch(G, s);
+}
 
-
-public: 
-	DFS() {
-
+void DFS::depthFirstSearch(Graph& G, int v) {
+	visited[v] = true;
+	count++;
+	for (int w : G.getAdj(v)) {
+		if (!visited[w]) {
+			depthFirstSearch(G, w);
+		};
 	}
+}
+bool DFS::marked(int w) const {
+	return visited[w];
+}
+int DFS::getCount() const {
+	return count;
+}
 
-};
+
+
