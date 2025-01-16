@@ -4,6 +4,7 @@
 #include "Stack.h"
 #include "Graph.h"
 #include "DFS.h"
+#include "DepthFirstPaths.h"
 using namespace std;
 int main() {
 	// node
@@ -23,8 +24,14 @@ int main() {
 	g.readEdges("graph.txt");
 	g.toString();
 
+	// dfs
 	DFS dfs(g, 9);
 	cout << dfs.getCount() << endl;
+
+	// dfs path
+	DepthFirstPaths dfsp(g, 1);
+	// should be false
+	cout << dfsp.hasPathTo(2) << endl;
 
 
 	

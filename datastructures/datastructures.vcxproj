@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="DepthFirstPaths.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="DFS.cpp" />
   </ItemGroup>
@@ -136,6 +137,7 @@
     <ClInclude Include="DFS.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="DepthFirstPaths.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
